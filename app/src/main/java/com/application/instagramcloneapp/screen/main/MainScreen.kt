@@ -54,10 +54,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
@@ -271,23 +268,23 @@ fun InstaPostItem(post: Post) {
                     shape = CircleShape,
                     color = Color.LightGray
                 ) {
-                    if (post.userProfileImage.isEmpty()) {
-                        Icon(
-                            imageVector = Icons.Default.Person,
-                            contentDescription = null,
-                            modifier = Modifier.size(48.dp),
-                            tint = Color.White
-                        )
-                    } else {
-                        val bitmap = remember(post.userProfileImage) {
-                            ImageUtils.base64ToBitmap(post.userProfileImage)
-                        }
+                    val bitmap =  remember(post.userProfileImage) {
+                        ImageUtils.base64ToBitmap(post.userProfileImage)
+                    }
+                    if (bitmap != null) {
+                            Image(
+                                bitmap = bitmap.asImageBitmap(),
+                                contentDescription = null,
+                                modifier = Modifier.fillMaxSize(),
+                                contentScale = ContentScale.Crop
+                            )
 
-                        Image(
-                            bitmap = bitmap.asImageBitmap(),
-                            contentDescription = null,
-                            modifier = Modifier.fillMaxSize(),
-                            contentScale = ContentScale.Crop
+
+                    } else {Icon(
+                        imageVector = Icons.Default.Person,
+                        contentDescription = null,
+                        modifier = Modifier.size(48.dp),
+                        tint = Color.White
                         )
                     }
                 }
@@ -387,7 +384,6 @@ fun FollowSuggestionItem(
     user: User,
     onFollowClick: (User) -> Unit
 ) {
-    var isFollowing by rememberSaveable { mutableStateOf(false) }
 
     Row(
         modifier = Modifier
@@ -408,6 +404,13 @@ fun FollowSuggestionItem(
                     bitmap = bitmap.asImageBitmap(),
                     contentDescription = null,
                     contentScale = ContentScale.Crop
+                )
+            }else{
+                Icon(
+                    imageVector = Icons.Default.Person,
+                    contentDescription = null,
+                    modifier = Modifier.size(48.dp),
+                    tint = Color.White
                 )
             }
         }
