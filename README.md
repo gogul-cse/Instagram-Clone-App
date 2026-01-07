@@ -2,49 +2,12 @@
 
 A modern, scalable **Instagram Clone** built using **Android (Jetpack Compose)** and **FastAPI**, designed to demonstrate real‑world mobile application architecture, clean code practices, and cloud‑ready backend integration.
 
-This project closely mirrors core Instagram functionalities such as authentication, feed, posts, likes, follow system, and profile management, making it an ideal **portfolio project for recruiters and hiring managers**.
-
 ---
+## 🚀 Tech Stack
 
-## 🚀 Project Overview
-
-This Instagram Clone is a **full‑stack mobile application** that showcases:
-
-* Production‑ready Android development using **Jetpack Compose**
-* Clean Architecture (MVVM + Repository pattern)
-* Backend API development using **FastAPI**
-* Firebase integration for authentication and data storage
-* Scalable and maintainable codebase following industry best practices
-
-The goal of this project is to **demonstrate end‑to‑end app development skills**, from UI/UX to backend APIs.
-
----
-
-## 🛠 Tech Stack
-
-### Frontend (Android)
-
-* **Kotlin**
-* **Jetpack Compose** (Modern UI Toolkit)
-* **MVVM Architecture**
-* **Hilt (Dependency Injection)**
-* **Navigation Component**
-* **StateFlow / LiveData**
-* **Material 3 Design**
-
-### Backend
-
-* **FastAPI (Python)**
-* **RESTful APIs**
-* **JWT Authentication**
-* **Pydantic Models**
-
-### Database & Cloud
-
-* **Firebase Authentication**
-* **Firebase Firestore**
-* **Firebase Storage (Images)**
-
+* Android: Kotlin, Jetpack Compose, MVVM, Hilt, Material 3
+* Backend: FastAPI, REST APIs, JWT
+* Cloud & DB: Firebase Authentication, Firestore, Firebase Storage
 ---
 
 ## ✨ Features
@@ -93,6 +56,8 @@ ViewModel (MVVM)
 Repository Layer
         ↓
 FastAPI Backend / Firebase
+
+---
 
 <img width="819" height="733" alt="Screenshot 2026-01-07 123948" src="https://github.com/user-attachments/assets/8cb36892-9d2e-4d8b-9d1b-f5acd26cd084" />
 
