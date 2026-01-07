@@ -45,8 +45,12 @@ A modern, scalable **Instagram Clone** built using **Android (Jetpack Compose)**
 * Light theme design
 
 ---
+<img width="910" height="733" alt="Screenshot 2026-01-07 123534" src="https://github.com/user-attachments/assets/1a3b695d-3cf0-4670-bf4d-071467627c2d" />
 
-<img width="386" height="758" alt="Screenshot 2026-01-07 124932" src="https://github.com/user-attachments/assets/ceb026d9-2cb5-4c54-b71e-b6fda378535a" />
+<img width="819" height="733" alt="Screenshot 2026-01-07 123948" src="https://github.com/user-attachments/assets/6b34a2de-5f7b-442b-8260-2f4f931aebab" />
+
+<img width="386" height="758" alt="Screenshot 2026-01-07 124932" src="https://github.com/user-attachments/assets/39f3670f-de2d-41bd-b3db-afa0fbd93a33" />
+
 
 
 
